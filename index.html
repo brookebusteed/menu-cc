@@ -11,24 +11,12 @@
       crossorigin="anonymous"
     />
 
-    <style>
-      .dropdown {
-        display: flex;
-        justify-content: end;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <header>
-      <div class="dropdown">
-        <button
-          class="btn btn-secondary dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          MENU
-        </button>
+      <nav class="navbar">
+        <button class="menu-button">MENU</button>
         <ul class="dropdown-menu">
           <li><a class="dropdown-item" href="index.html">Home</a></li>
           <li><a class="dropdown-item" href="projects.html">Projects</a></li>
@@ -37,41 +25,10 @@
           <li><a class="dropdown-item" href="journal.html">Journal</a></li>
           <li><a class="dropdown-item" href="contact.html">Contact</a></li>
         </ul>
-      </div>
+      </nav>
     </header>
 
-    <script>
-      function changeMenu(event) {
-        event.preventDefault();
-        return (
-          <div class="side-menu" id="sideMenu">
-            <ul>
-              <li>
-                <a href="index.html">Home</a>
-              </li>
-              <li>
-                <a href="projects.html">Projects</a>
-              </li>
-              <li>
-                <a href="wwd.html">What We Do</a>
-              </li>
-              <li>
-                <a href="wwa.html">Who We Are</a>
-              </li>
-              <li>
-                <a href="journal.html">Journal</a>
-              </li>
-              <li>
-                <a href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        );
-      }
-
-      let handleClick = document.querySelector("button");
-      handleClick.addEventListener("click", changeMenu);
-    </script>
+    <script></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
