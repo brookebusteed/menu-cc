@@ -93,7 +93,9 @@
     <script>
       document
         .getElementById("menuButton")
-        .addEventListener("click", function () {
+        .addEventListener("click", 
+        
+        function () {
           var sideMenu = document.getElementById("sideMenu");
           var dropdownMenu = document.getElementById("dropdownMenu");
           if (
@@ -110,3 +112,15 @@
     </script>
   </body>
 </html>
+
+<script>
+      function displaySideMenu(event) {
+        event.preventDefault();
+        let sideMenu = document.querySelector("side-menu");
+        let dropdownMenu = document.querySelector("dropdown-menu");
+       
+      }
+
+      let handleMenuChange = document.querySelector("button");
+      handleMenuChange.addEventListener("click", displaySideMenu);
+      
