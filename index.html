@@ -11,7 +11,44 @@
       crossorigin="anonymous"
     />
 
-    <style></style>
+    <style>
+      .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #333;
+        padding: 10px 20px;
+      }
+      .menu-button {
+        color: white;
+        background-color: #333;
+        padding: 10px;
+        border: none;
+      }
+      .dropdown-menu {
+        position: fixed;
+        top: 0px;
+        right: -250px;
+        background-color: white;
+        border-left: 1px solid #ccc;
+        list-style: none;
+        padding: 50px 20px;
+        transition: right 0.3s ease-in-out;
+      }
+      .dropdown-menu.show {
+        right: 0;
+      }
+      .dropdown-menu li {
+        margin: 20px 0;
+      }
+      .dropdown-menu a {
+        text-decoration: none;
+        color: black;
+      }
+      .dropdown-menu li a:hover {
+        background-color: #f0f0f0;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -28,7 +65,23 @@
       </nav>
     </header>
 
-    <script></script>
+    <script>
+      //function showMenu(event) {
+      //event.preventDefault();
+      //event.target.innerHTML = "show";
+      //}
+
+      //let followClick = document.querySelector(".menu-button");
+      //followClick.addEventListener("click", showMenu);
+
+      document
+        .querySelector(".menu-button")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          let dropdownMenu = document.querySelector(".dropdown-menu");
+          dropdownMenu.classList.toggle("show");
+        });
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
